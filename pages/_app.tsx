@@ -40,6 +40,8 @@ import { bootstrap } from 'lib/bootstrap-client'
 // import { fathomId, fathomConfig } from 'lib/config'
 // import * as Fathom from 'fathom-client'
 import ReactGA from 'react-ga' // https://github.com/react-ga/react-ga
+import NProgress from 'nprogress' //nprogress module
+import 'nprogress/nprogress.css' //styles of nprogress//Binding events.
 
 ReactGA.initialize('UA-119549631-1')
 ReactGA.timing({
@@ -58,18 +60,25 @@ export default function App({ Component, pageProps }) {
 
   React.useEffect(() => {
     function onRouteChangeComplete() {
-      console.log('route change complete')
+      // console.log('route change complete')
+      NProgress.done()
       if (typeof window !== 'undefined') {
         const url = window.location.pathname + window.location.search
         // console.log("routeChangeComplete: record pageview to ", url);
         ReactGA.pageview(url)
       }
     }
+    function onRouteChangeError() {
+      NProgress.done()
+    }
 
+    router.events.on('routeChangeStart', () => NProgress.start())
     router.events.on('routeChangeComplete', onRouteChangeComplete)
+    router.events.on('routeChangeError', onRouteChangeError)
 
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
+      router.events.off('routeChangeError', onRouteChangeError)
     }
   }, [])
 

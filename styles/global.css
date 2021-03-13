@@ -35,3 +35,19 @@ body {
   height: 1.2em !important;
   width: 1.2em !important;
 }
+
+#nprogress .bar {
+  background-image: linear-gradient(to right, #ffc800, #8fff00) !important;
+  height: 6px !important;
+}
+#nprogress .bar .peg {
+  /* This is a funny staircase-like step that looks odd when height of bar is increased to 6px. So just remove it. */
+  display: none;
+}
+#nprogress .spinner .spinner-icon {
+  margin-top: 4px;
+  border-top-color: #22dd43;
+  border-left-color: #067a1b;
+  width: 24px;
+  height: 24px;
+}
