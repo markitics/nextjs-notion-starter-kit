@@ -9,11 +9,10 @@ export default class MyDocument extends Document {
         <Html lang='en'>
           <Head>
             <link rel='shortcut icon' href='/favicon.png' />
-
             <link
               rel='apple-touch-icon'
               sizes='180x180'
-              href='/apple-touch-icon.png'
+              href='/apple-icon-180x180.png'
             />
             <link
               rel='icon'
@@ -33,16 +32,31 @@ export default class MyDocument extends Document {
               sizes='16x16'
               href='/favicon-16x16.png'
             />
-
             <link rel='manifest' href='/manifest.json' />
           </Head>
-
           <body>
             <script src='noflash.js' />
-
             <Main />
-
             <NextScript />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="8d790ade-7cd4-4952-866f-f6fd0965a48b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
+              }}
+              defer
+            />
+            {/* Hotjar Tracking Code for awesound.com  */}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(h,o,t,j,a,r){
+                        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                        h._hjSettings={hjid:802823,hjsv:6};
+                        a=o.getElementsByTagName('head')[0];
+                        r=o.createElement('script');r.async=1;
+                        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                        a.appendChild(r);
+                      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
+              }}
+            />
           </body>
         </Html>
       </IconContext.Provider>
