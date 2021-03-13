@@ -37,8 +37,17 @@ import 'prismjs/components/prism-bash'
 import React from 'react'
 import { useRouter } from 'next/router'
 import { bootstrap } from 'lib/bootstrap-client'
-import { fathomId, fathomConfig } from 'lib/config'
-import * as Fathom from 'fathom-client'
+// import { fathomId, fathomConfig } from 'lib/config'
+// import * as Fathom from 'fathom-client'
+import ReactGA from 'react-ga' // https://github.com/react-ga/react-ga
+
+ReactGA.initialize('UA-119549631-1')
+ReactGA.timing({
+  category: 'JS Libraries',
+  variable: 'load',
+  value: 20, // in milliseconds
+  label: 'CDN libs'
+})
 
 if (typeof window !== 'undefined') {
   bootstrap()
@@ -48,18 +57,19 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
 
   React.useEffect(() => {
-    if (fathomId) {
-      Fathom.load(fathomId, fathomConfig)
-
-      function onRouteChangeComplete() {
-        Fathom.trackPageview()
+    function onRouteChangeComplete() {
+      console.log('route change complete')
+      if (typeof window !== 'undefined') {
+        const url = window.location.pathname + window.location.search
+        // console.log("routeChangeComplete: record pageview to ", url);
+        ReactGA.pageview(url)
       }
+    }
 
-      router.events.on('routeChangeComplete', onRouteChangeComplete)
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
 
-      return () => {
-        router.events.off('routeChangeComplete', onRouteChangeComplete)
-      }
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
   }, [])
 
