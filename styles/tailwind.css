@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base { */
+/* @apply text-4xl pt-4 pb-2 font-light bg-clip-text text-transparent bg-gradient-to-r from-prim-800 to-prim-600; */
+.light-mode .notion-h-title,
+.light-mode .notion-h,
+.light-mode .notion-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-prim-800 via-prim-900 to-prim-600;
+}
+.dark-mode .notion-h-title,
+.dark-mode .notion-h,
+.dark-mode .notion-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-300 via-prim-400 to-prim-300;
+}
+
+/* .light-mode .notion-h a,
+  .light-mode .notion-h-title a {
+    @apply text-seco-500;
+  } */
+/* a:hover, */
+/* .notion-toggle > summary {
+  Copied from react-notion-x styles: .css for .notion-link
+  color: inherit;
+  word-break: break-word;
+  text-decoration: inherit;
+  border-bottom: 0.05em solid;
+  border-color: var(--fg-color-2);
+  opacity: 0.7;
+  transition: border-color 100ms ease-in, opacity 100ms ease-in;
+} */
+.notion-link:hover,
+.notion-toggle > summary:hover,
+.notion-page-link:hover .notion-page-title-text,
+.notion-page-link:visited .notion-page-title-text,
+.notion-link:visited {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  @apply px-0.5 -mx-0.5;
+}
+.light-mode .notion-link,
+.light-mode .notion-page-title-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-seco-600 to-seco-800;
+}
+.light-mode .notion-toggle:not(open) > summary {
+  @apply text-seco-700;
+}
+.dark-mode .notion-link,
+.dark-mode .notion-page-title-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-seco-200 to-seco-300;
+}
+.dark-mode .notion-toggle:not(open) > summary {
+  @apply text-seco-300;
+}
+.light-mode .notion-link:hover,
+.light-mode .notion-toggle > summary:hover,
+.light-mode .notion-page-title-text:hover {
+  /* .light-mode a:hover, */
+  @apply bg-gradient-to-t from-seco-50 to-transparent text-seco-900;
+}
+.dark-mode .notion-link:hover,
+.dark-mode .notion-toggle > summary:hover,
+.dark-mode .notion-page-title-text:hover {
+  @apply bg-gradient-to-tr from-seco-800 to-seco-900 text-white;
+}
+/* Over-ride styles.css so that when we have a link to a page, it's not double-underlined */
+a.notion-link > .notion-page-title > .notion-page-title-text {
+  border-bottom: none;
+}
+.notion-toggle {
+  padding-left: 9px !important;
+  /* to be in line with bullet points */
+}
+/* .light-mode h2 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-1100 via-prim-900 to-prim-1000;
+  }
+  .h2xl {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-seco-1000 to-seco-600;
+  }
+  .h2xl-seco {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-seco-1000 to-seco-600;
+  }
+  .light-mode h3,
+  .light-mode .h3 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-1100 via-prim-800 to-prim-900;
+  }
+  .h3-seco {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-seco-1000 to-seco-700;
+  }
+  .text-fade-out {
+    @apply py-2 bg-clip-text text-transparent bg-gradient-to-b from-gray-500 to-transparent;
+  } */
+/* } */

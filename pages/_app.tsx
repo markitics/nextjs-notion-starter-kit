@@ -1,6 +1,6 @@
 // global styles shared across the entire site
 import 'styles/global.css'
-
+import 'styles/tailwind.css'
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
 

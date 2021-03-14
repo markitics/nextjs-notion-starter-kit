@@ -201,10 +201,21 @@
   opacity: 1;
 }
 
-.notion-link:hover {
+.notion-link:hover,
+.notion-toggle > summary:hover,
+.notion-page-link:hover .notion-page-title-text {
   border-width: 3px;
   border-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
   border-image-slice: 1;
+}
+.notion-toggle > summary:hover,
+.notion-page-link:hover .notion-page-title-text {
+  /* Smaller border here to avoid text moving */
+  border-width: 2px;
+}
+.notion-toggle > summary:hover {
+  /* Compensate for width of hover border */
+  margin-bottom: -2px;
 }
 
 .notion-red_background,

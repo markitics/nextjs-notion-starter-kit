@@ -38,13 +38,7 @@ export default class MyDocument extends Document {
             <script src='noflash.js' />
             <Main />
             <NextScript />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.$crisp=[];window.CRISP_WEBSITE_ID="8d790ade-7cd4-4952-866f-f6fd0965a48b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`
-              }}
-              defer
-            />
-            {/* Hotjar Tracking Code for awesound.com  */}
+            {/* Hotjar Tracking Code */}
             <script
               dangerouslySetInnerHTML={{
                 __html: `(function(h,o,t,j,a,r){
