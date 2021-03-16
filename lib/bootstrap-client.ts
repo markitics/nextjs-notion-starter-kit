@@ -1,6 +1,6 @@
 export function bootstrap() {
   console.log(`
-
+Open-source libraries by:
 ████████╗██████╗  █████╗ ███╗   ██╗███████╗██╗████████╗██╗██╗   ██╗███████╗    ██████╗ ███████╗
 ╚══██╔══╝██╔══██╗██╔══██╗████╗  ██║██╔════╝██║╚══██╔══╝██║██║   ██║██╔════╝    ██╔══██╗██╔════╝
    ██║   ██████╔╝███████║██╔██╗ ██║███████╗██║   ██║   ██║██║   ██║█████╗      ██████╔╝███████╗
@@ -8,6 +8,6 @@ export function bootstrap() {
    ██║   ██║  ██║██║  ██║██║ ╚████║███████║██║   ██║   ██║ ╚████╔╝ ███████╗    ██████╔╝███████║
    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝    ╚═════╝ ╚══════╝
                                                                                                
-   This site is built using Notion, Next.js, and https://github.com/NotionX/react-notion-x.
+   This site is built using Notion, Next.js, and https://github.com/NotionX/react-notion-x. See https://markmoriarty.com/use-notion-for-your-website for details.
 `)
 }

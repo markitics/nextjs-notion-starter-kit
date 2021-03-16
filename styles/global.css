@@ -51,7 +51,7 @@ body {
   width: 24px;
   height: 24px;
 }
-ul.notion-list-disc { 
+ul.notion-list-disc {
   list-style-type: square;
 }
 ul ul.notion-list-disc {
@@ -65,3 +65,10 @@ ul ul ul ul.notion-list-disc {
   list-style-type: disc;
 }
 
+.notion-aside-table-of-contents-header {
+  display: none;
+}
+.notion-aside-table-of-contents {
+  width: 242px;
+  /* Only visible on wide screens. But if a heading is super long, we don't want table of contents to be too wide */
+}

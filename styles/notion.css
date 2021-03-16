@@ -308,7 +308,7 @@
 .dark-mode .notion-blue_background,
 .dark-mode .notion-purple_background,
 .dark-mode .notion-teal_background,
-.dark-mode .notion-yellow_background,
+/* .dark-mode .notion-yellow_background, */
 .dark-mode .notion-orange_background,
 .dark-mode .notion-brown_background,
 .dark-mode .notion-gray_background {
@@ -342,4 +342,24 @@
 .notion-bookmark:hover {
   border-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
   border-image-slice: 1;
+}
+
+/* Mark tweaks below this line */
+.dark-mode .notion-yellow_background {
+  padding: 0.2rem 0.5rem;
+  margin: -0.2 -0.5rem 0 -0.25rem;
+  border-radius: 0.5rem;
+  border-bottom-left-radius: 0.125rem;
+  box-decoration-break: clone;
+
+  background-color: none;
+
+  /* light yellow */
+  background-image: linear-gradient(
+    119deg,
+    var(--bg-color),
+    #534e0e 10.5%,
+    #665f11 85.29%,
+    var(--bg-color)
+  );
 }

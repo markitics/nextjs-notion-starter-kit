@@ -7,12 +7,21 @@
 .light-mode .notion-h-title,
 .light-mode .notion-h,
 .light-mode .notion-title {
-  @apply bg-clip-text text-transparent bg-gradient-to-br from-prim-800 via-prim-900 to-prim-600;
+  @apply text-prim-800 sm:bg-clip-text sm:text-transparent sm:bg-gradient-to-br sm:from-prim-800 via-prim-900 sm:to-prim-600;
 }
 .dark-mode .notion-h-title,
 .dark-mode .notion-h,
 .dark-mode .notion-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-lime-100 via-lime-300 to-lime-200;
+}
+.dark-mode .notion-h > .notion-h-title {
+  @apply text-lime-500 sm:bg-clip-text sm:text-transparent sm:bg-gradient-to-r sm:from-prim-400 sm:via-prim-500 sm:to-prim-400;
+}
+.dark-mode .notion-h2 > .notion-h-title {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-300 via-prim-400 to-prim-300;
+}
+.dark-mode .notion-h3 > .notion-h-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-200 via-prim-200 to-prim-100;
 }
 
 /* .light-mode .notion-h a,
@@ -65,13 +74,13 @@
 .dark-mode .notion-page-title-text:hover {
   @apply bg-gradient-to-tr from-seco-800 to-seco-900 text-white;
 }
-/* Over-ride styles.css so that when we have a link to a page, it's not double-underlined */
-a.notion-link > .notion-page-title > .notion-page-title-text {
-  border-bottom: none;
-}
 .notion-toggle {
   padding-left: 9px !important;
   /* to be in line with bullet points */
+}
+/* Over-ride styles.css so that when we have a link to a page, it's not double-underlined */
+a.notion-link > .notion-page-title > .notion-page-title-text {
+  border-bottom: none;
 }
 /* .light-mode h2 {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-prim-1100 via-prim-900 to-prim-1000;
