@@ -39,6 +39,36 @@ module.exports = withBundleAnalyzer({
         permanent: false
       },
       {
+        source: '/stripe/stripe-site',
+        destination:
+          'https://achieved-author-f0e.notion.site/Stripe-Sites-fa02c1cd0b9d4726ba2f54ec9a0bb5a6',
+        permanent: false
+      },
+      {
+        source: '/stripe/sample-presentation/excel',
+        destination:
+          'https://www.dropbox.com/s/56sge6viveh1nai/MarkMoriarty-Stripe-BizOps.xlsx?dl=0',
+        permanent: false
+      },
+      {
+        source: '/stripe/sample-presentation/ppt',
+        destination:
+          'https://www.dropbox.com/s/82zlagno3r8tc66/Mark_Moriarty_Bizops_presentation.pptx?dl=0',
+        permanent: false
+      },
+      {
+        source: '/stripe/sample-presentation/pdf',
+        destination:
+          'https://www.dropbox.com/s/pj8ngsqfy686ojx/Mark_Moriarty_Bizops_presentation.pdf?dl=0',
+        permanent: false
+      },
+      {
+        source: '/stripe/sample-presentation',
+        destination:
+          'https://www.dropbox.com/s/pj8ngsqfy686ojx/Mark_Moriarty_Bizops_presentation.pdf?dl=0',
+        permanent: false
+      },
+      {
         source: '/tip',
         destination: 'https://buy.stripe.com/fZe14s6FOg70doIfZ0',
         permanent: false
